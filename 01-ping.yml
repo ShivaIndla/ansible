@@ -3,5 +3,5 @@
   hosts: web
   become: true
   tasks:
-  - name: pinging the server
-    ansible.builtin.ping:
+    - name: pinging the server
+      ansible.builtin.ping:

@@ -1,0 +1,7 @@
+---
+- name: vars passing through inventory file
+  hosts: localhost
+  tasks:
+    - name: passing vars
+      ansible.builtin.debug:
+        msg: "Hi, UserName is {{ USERNAME }} and Password is {{ PASSWORD }}"
