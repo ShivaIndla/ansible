@@ -1,0 +1,8 @@
+---
+- name: vars passing through arguments #Pass the vars in command by mentioning -e (-e person=Shivv -e wishesh=GM)
+  hosts: localhost
+  become: true
+  tasks:
+    - name: passing vars from args
+      ansible.builtin.debug:
+        msg: "Hellow {{person}}, Good {{wishes}}"

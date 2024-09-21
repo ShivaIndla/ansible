@@ -1,0 +1,21 @@
+---
+- name: defining vars in tasks
+  hosts: localhost
+  become: true
+  vars:
+    course: "Ansible"
+    trainer: "SivaKumar"
+    duration: "120 Hrs"
+  tasks:
+  - name: vars in tasks
+    vars:
+      course: "Terraform"
+      trainer: "Kumar"
+      duration: "150 Hrs"
+    ansible.builtin.debug:
+      msg: "Hi, we are learning {{course}} from {{trainer}}, duration is {{duration}}."
+
+  - name: vars in playlevel
+    ansible.builtin.debug:
+      msg: "Hi, we are learning {{course}} from {{trainer}}, duration is {{duration}}."
+
