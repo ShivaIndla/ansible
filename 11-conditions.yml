@@ -1,1 +1,11 @@
 ---
+- name: conditions
+  hosts:  app
+  #become: true
+  tasks:
+    - name: user exists or not
+      ansible.builtin.command:  id root
+        msg: "user info"
+
+    - name: user exists or not
+      msg: "process continuied"
