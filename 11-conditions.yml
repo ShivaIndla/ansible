@@ -1,6 +1,6 @@
 ---
 - name: conditions
-  hosts:  40.83.167.39
+  hosts:  app
   become: true
   tasks:
     - name: user exists or not
