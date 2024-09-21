@@ -1,6 +1,6 @@
 ---
 - name: types of data types
-  hosts: localhost
+  hosts: 40.83.167.39
   become: true
   vars:
     course: Devops with aws #string
