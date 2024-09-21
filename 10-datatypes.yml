@@ -4,12 +4,12 @@
   become: true
   vars:
     course: Devops with aws #string
-    Tools: #list
+    Tools: #list or array
       - RHEL
       - shell
       - ansible
-    experience: #dictionary or map
-      devops: 4   #elements or number
+    experience: #dictionary or map(it consistes set of elements)
+      devops:    #elements or number
       AWS: 5
       docker: 3
     male: true  #boolenan
