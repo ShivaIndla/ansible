@@ -4,7 +4,8 @@
   become: true
   tasks:
     - name: user exists or not
-      ansible.builtin.command:  id azure-user
+      ansible.builtin.debug:
+        msg: "hellow"
 
     - name: process continuied
       ansible.builtin.debug:
