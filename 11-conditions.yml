@@ -5,7 +5,6 @@
   tasks:
     - name: user exists or not
       ansible.builtin.command: id root
-        msg: "hellow"
 
     - name: process continuied
       ansible.builtin.debug:
