@@ -5,7 +5,8 @@
   tasks:
     - name: user exists or not
       ansible.builtin.command:  id root
-        msg: "user info"
 
-    - name: user exists or not
-      msg: "process continuied"
+    - name: process continuied
+      ansible.builtin.debug:
+       msg: "process continuied"
+
