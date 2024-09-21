@@ -2,17 +2,19 @@
 - name: conditions
   hosts:  app
   become: yes
+  vars:
+    user: "krishn"
   tasks:
     - name: user exists or not
-      ansible.builtin.command: id shivv
-      register: user
+      ansible.builtin.command: id {{user}}
+      register: user_info
       ignore_errors: true
 
     - name: print user info
       ansible.builtin.debug:
-       msg: "user info: {{user}}"
+       msg: "user info: {{user_info}}"
        
-    - name: create user
-        ansible.builtin.command: useradd shivv
-        when: user.rc != 0    #condition
+    - name: creating user
+      when: user_info.rc != 0    #condition
+      ansible.builtin.command: useradd {{user}}
 
