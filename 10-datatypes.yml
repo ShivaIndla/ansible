@@ -9,7 +9,7 @@
       - shell
       - ansible
     experience: #dictionary or map(it consistes set of elements)
-      devops:    #elements or number
+      devops: 4   #elements or number
       AWS: 5
       docker: 3
     male: true  #boolenan
