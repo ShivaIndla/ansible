@@ -1,7 +1,7 @@
 ---
 - name: conditions
   hosts:  app
-  #become: true
+  become: true
   tasks:
     - name: user exists or not
       ansible.builtin.command:  id root
