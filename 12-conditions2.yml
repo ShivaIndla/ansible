@@ -2,19 +2,19 @@
 - name: check number from prompt
   hosts: localhost
   become: yes
-  vars_prompt:
+  vars_prompt:    #prompts are always consider as text/string, we need to convert it to int by using int data type
     - name: number
       prompt: Please enter number
       private: false
     
   tasks:
     - name: Number is less than 10
-      when: number < 10
+      when: number | int < 10
       ansible.builtin.debug:
         msg: "given number is less than 10"
 
     - name: number is grater than 10
-      when: number > 10
+      when: number | int > 10
       ansible.builtin.debug:
         msg: "given number is grater than 10"
 
